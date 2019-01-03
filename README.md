@@ -116,3 +116,25 @@ https://www.youtube.com/watch?v=_SIaIBDjCKA
 https://www.youtube.com/watch?v=WApaRVVx364
 
 https://www.youtube.com/watch?v=jHAdY902vmc&list=PLUGiyabPxJHdB9iS7GcgshwPQl2scsdfK
+
+
+
+Commom
+
+Camada onde ficarão todas as coisas que são comuns a vários sistemas, como mensagens de validação.
+
+Domain 
+
+Classe onde são feitos os contratos, contando com uma réplica do banco de dados (onde podem ser feitas as validações) e com as interfaces.
+
+Infrastructure
+
+Camada responsável pela conexão com banco de dados, recebe as instruções nos repositórios, instruções que vem da camada de domínio (repositórios herdam das interfaces) e fazem as operações que envolvem BD.
+
+Business
+
+Camada responsável pela comunicação com os controllers, recebe os dados do controller e manda para o repositório lidar. Os dados também fazem o caminho inverso indo dos repositórios para a camada business que em seguida enviará ao controller.
+
+StartUp
+
+Camada responsável pele implementação do Unity e resolução de dependências.
